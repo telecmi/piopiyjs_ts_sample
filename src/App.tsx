@@ -1,8 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
+import PIOPIY from 'piopiyjs';
 import './App.css';
 
-function App() {
+function App () {
+
+  var piopiy = new PIOPIY( {
+    name: 'Display Name',
+    debug: true,
+    autoplay: true,
+    ringTime: 60
+  } );
+
+  piopiy.login( 'user_id', 'password', 'sbcind.telecmi.com' );
   return (
     <div className="App">
       <header className="App-header">
